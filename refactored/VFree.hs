@@ -9,15 +9,6 @@ import HFNonempty
 -- VFree
 -- want to recover the parameter of some kind to specify the type of the leafs,
 -- then can write HFree using this parameter as Type, to specify the type of the leafs. 
--- this currently is implicit, since to make the HFree for the type param it needs to be *? could be k!?
---
--- while this takes a f of (* -> *)
-
--- cant turn this into Maybe l ?
-
--- need VFree * . Just
--- but cant have partially applied type synonym
--- dont what to wrap into newtype either
 
 data VFree a (k :: Maybe *) where
  VPure :: a -> VFree a Nothing
